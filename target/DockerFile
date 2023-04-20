@@ -1,0 +1,5 @@
+FROM adoptopenjdk:11-jre-hotspot
+MAINTAINER 4softwaredevelopers.com
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} neoris-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/neoris-0.0.1-SNAPSHOT.jar"]
