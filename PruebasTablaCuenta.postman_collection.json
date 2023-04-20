@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "f850d09f-bb1a-4f5b-9404-3c3ab3d43d4c",
+		"name": "PruebasTablaCuenta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20929250"
+	},
+	"item": [
+		{
+			"name": "Crear_Cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\" : 2,\r\n    \"tipoCuenta\" : \"Corriente\",\r\n    \"saldoInicial\" : 7000.0,\r\n    \"estado\" : true,\r\n    \"nombre\" : \"Yeison Rojas\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud_cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud_cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TraerTodo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "TraerPorId",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"tipoCuenta\": \"Ahorro\",\r\n    \"saldoInicial\": 27000.0,\r\n    \"estado\": true,\r\n    \"nombre\": \"Yeison Rojas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cuentas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCuenta",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
